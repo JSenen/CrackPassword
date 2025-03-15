@@ -99,8 +99,9 @@ public class CrackPassword {
 
             while ((password = br.readLine()) != null) {
                 attempt++;
+                float percentage = (attempt * 100) / lines;
                 if (attempt % 1 == 0) { // Mostrar progreso
-                    System.out.printf("\r%s", "🔄 Attempt: " + attempt + " - Checking: " + password);
+                    System.out.printf("\r%s", "🔄 Attempt: " + attempt + " " + percentage + "% " + password);
                 }
 
                 // Generar el hash de la contraseña en prueba
